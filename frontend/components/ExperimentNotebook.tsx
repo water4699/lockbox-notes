@@ -99,7 +99,7 @@ export function ExperimentNotebook() {
       } else {
         toast.error('Failed to create experiment');
       }
-    } catch (_error) {
+    } catch {
       toast.error('Error creating experiment');
     } finally {
       setIsCreatingExperiment(false);
@@ -162,7 +162,7 @@ export function ExperimentNotebook() {
       } else {
         toast.error('Failed to add step');
       }
-    } catch (_error) {
+    } catch {
       toast.error('Error adding step');
     } finally {
       setIsAddingStep(false);
