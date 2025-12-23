@@ -3,6 +3,7 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { FlaskConical, Shield, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Header() {
   return (
@@ -82,9 +83,11 @@ export function Header() {
                           className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium bg-secondary hover:bg-secondary/80 transition-colors"
                         >
                           {chain.hasIcon && chain.iconUrl && (
-                            <img
+                            <Image
                               alt={chain.name ?? 'Chain icon'}
                               src={chain.iconUrl}
+                              width={16}
+                              height={16}
                               className="w-4 h-4 rounded-full"
                             />
                           )}
